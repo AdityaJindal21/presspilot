@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="830.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.hawkers.HawkersController">
+
+   <children>
+      <!-- Main container to center -->
+      <VBox fx:id="mainContainer" alignment="TOP_CENTER" layoutX="80.0" layoutY="10.0" prefWidth="670.0" spacing="10.0">
+
+         <!-- Header -->
+         <HBox alignment="CENTER_LEFT" prefHeight="60.0" spacing="10.0" style="-fx-background-color: black; -fx-background-radius: 8;">
+            <ImageView fitHeight="44.0" fitWidth="57.0" preserveRatio="true">
+               <image>
+                  <Image url="@hawkerimage.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="35.0" prefWidth="191.0" text="Hawkers Console" textFill="white">
+               <font><Font name="Segoe UI Semibold" size="24.0" /></font>
+            </Label>
+         </HBox>
+         <!-- Form Container -->
+         <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 20; -fx-border-color: #cfd8dc; -fx-border-radius: 12; -fx-background-radius: 12;">
+
+            <!-- Row 1: Hawker ID + Fetch -->
+            <HBox spacing="10.0">
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Hawker ID">
+                     <font><Font name="Berlin Sans FB" size="14.0" /></font>
+                  </Label>
+                  <ComboBox fx:id="ComboHawkerId" editable="true" prefWidth="150.0" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+            </HBox>
+            <Button onAction="#doFetch" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: black;" text="🔍 Fetch" textFill="WHITE" />
+
+            <!-- Row 2: Name + Contact -->
+            <HBox spacing="20.0">
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Name">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtName" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Contact Number">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtContact" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+            </HBox>
+
+            <!-- Row 3: Address + Email -->
+            <HBox spacing="20.0">
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Address">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtAddress" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Email">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtEmail" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+            </HBox>
+
+            <!-- Row 4: Profile Image -->
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+               <ImageView fx:id="prev" fitHeight="125.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@admininfo.png" />
+                  </image>
+               </ImageView>
+               <Button onAction="#doBrowse" style="-fx-background-color: black;" text="📁 Browse" textFill="WHITE" />
+            </HBox>
+
+            <!-- Row 5: Areas and Date -->
+            <HBox spacing="20.0">
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="All Areas">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <ComboBox fx:id="ComboAllAreas" editable="true" onAction="#doAddinSelectedArea" prefWidth="150.0" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Selected Areas">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtSelArea" prefWidth="180.0" style="-fx-background-radius: 8; -fx-border-color: #b0bec5;" />
+               </VBox>
+               <VBox spacing="4.0">
+                  <Label style="-fx-text-fill: #37474f;" text="Date of Joining">
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font></Label>
+                  <DatePicker fx:id="doj" style="-fx-background-radius: 8;" />
+               </VBox>
+            </HBox>
+
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER" spacing="20.0">
+               <Button onAction="#doClear" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: black;" text="🧹 Clear" textFill="WHITE" />
+               <Button onAction="#doRecruit" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: black;" text="📝 Recruit Now" textFill="WHITE" />
+               <Button onAction="#doModify" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: black;" text="✏️ Modify" textFill="WHITE" />
+               <Button onAction="#doDelete" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: black;" text="🗑 Delete" textFill="WHITE" />
+            </HBox>
+
+         </VBox>
+      </VBox>
+   </children>
+</AnchorPane>

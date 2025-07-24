@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.billcollect.BillCollectorController">
+   <children>
+      <Label layoutX="259.0" layoutY="31.0" text="Fetch Bill">
+         <font>
+            <Font name="Book Antiqua Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="168.0" layoutY="123.0" text="Mobile Number">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtmob" layoutX="168.0" layoutY="150.0" />
+      <Button layoutX="360.0" layoutY="149.0" mnemonicParsing="false" onAction="#doshowpending" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: black;" text="Show Pending Bill" textFill="WHITE" />
+      <TableView fx:id="tablevu" layoutX="130.0" layoutY="200.0" prefHeight="200.0" prefWidth="379.0" />
+      <Label layoutX="167.0" layoutY="468.0" text="Total Pending Amount">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtpendingAmt" layoutX="339.0" layoutY="465.0" />
+      <Button layoutX="270.0" layoutY="505.0" mnemonicParsing="false" onAction="#dopay" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: black;" text="Paid" textFill="WHITE" />
+      <Button layoutX="270.0" layoutY="414.0" mnemonicParsing="false" onAction="#doExport" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: black;" text="Export to Excel" textFill="WHITE" />
+      <Circle layoutX="145.0" layoutY="65.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="73.0" fitWidth="77.0" layoutX="108.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@fetchbill.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

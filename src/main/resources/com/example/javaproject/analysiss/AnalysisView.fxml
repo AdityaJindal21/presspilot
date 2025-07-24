@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="667.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.analysis.AnalysisController">
+   <children>
+      <Label layoutX="211.0" layoutY="21.0" text="Graphical Analysis">
+         <font>
+            <Font name="Book Antiqua Bold" size="25.0" />
+         </font>
+      </Label>
+      <Circle layoutX="321.0" layoutY="100.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="290.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@analysisimage.png" />
+         </image>
+      </ImageView>
+      <LineChart fx:id="linechartid" layoutX="71.0" layoutY="166.0" prefHeight="242.0" prefWidth="500.0" title="Customer Distribution By Area">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <PieChart fx:id="PieChart" layoutX="184.0" layoutY="420.0" prefHeight="222.0" prefWidth="357.0" title="Paper Comparison With Price" />
+   </children>
+</AnchorPane>

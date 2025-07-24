@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="722.0" prefWidth="791.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.dashboard.DashboardController">
+   <children>
+      <Label layoutX="335.0" layoutY="14.0" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #000000;" text="PressPilot" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="355.0" layoutY="60.0" text="Dashboard">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="48.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="73.0" layoutY="240.0" mnemonicParsing="false" onAction="#handlePaperManager" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Paper Manager">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="97.0" layoutX="112.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="288.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="313.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleHawkerManager" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Hawker Manager">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="96.0" fitWidth="150.0" layoutX="346.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_1.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="521.0" layoutY="124.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="546.0" layoutY="240.0" mnemonicParsing="false" onAction="#handelArea" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Insert Region">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="96.0" layoutX="585.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_2.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="48.0" layoutY="316.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="73.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleAddCustomer" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Add Client">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="107.0" layoutX="112.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_3.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="288.0" layoutY="316.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="314.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleBillGeneration" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Generate Invoice">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="122.0" layoutX="339.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_4.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="521.0" layoutY="316.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="546.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleBillBoard" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Invoice Summary">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="48.0" layoutY="509.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="73.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleBillCollector" prefHeight="24.0" prefWidth="162.0" style="-fx-background-color: white;" text="Fetch Bill">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="107.0" layoutX="112.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_6.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="288.0" layoutY="509.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="308.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleCustomerBoard" prefHeight="34.0" prefWidth="178.0" style="-fx-background-color: white;" text="Customer Overview">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="107.0" layoutX="352.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_7.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="113.0" layoutX="579.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_5.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="173.0" layoutX="521.0" layoutY="509.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
+      <Button layoutX="541.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleGraphicalAnalysis" prefHeight="34.0" prefWidth="178.0" style="-fx-background-color: white;" text="Graphical Analysis">
+         <font>
+            <Font name="Book Antiqua" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="85.0" fitWidth="107.0" layoutX="585.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_8.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

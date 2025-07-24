@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="554.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.billboard.BillBoardController">
+   <children>
+      <Label layoutX="264.0" layoutY="35.0" prefHeight="44.0" prefWidth="214.0" text="Invoice Summary">
+         <font>
+            <Font name="Book Antiqua Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="118.0" text="From">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startdate" layoutX="59.0" layoutY="147.0" />
+      <Label layoutX="279.0" layoutY="118.0" text="To">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="enddate" layoutX="279.0" layoutY="147.0" />
+      <Label layoutX="491.0" layoutY="118.0" text="Bill Status">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="billstatus" layoutX="491.0" layoutY="147.0" prefWidth="150.0" />
+      <Button layoutX="307.0" layoutY="195.0" mnemonicParsing="false" onAction="#doFind" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: black;" text="Find Now" textFill="WHITE" />
+      <TableView fx:id="tablevieu" layoutX="176.0" layoutY="238.0" prefHeight="200.0" prefWidth="377.0" />
+      <Label layoutX="264.0" layoutY="493.0" text="Amount">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmt" layoutX="341.0" layoutY="490.0" />
+      <Button layoutX="314.0" layoutY="447.0" mnemonicParsing="false" onAction="#doExport" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: black;" text="Export to Excel" textFill="WHITE" />
+      <Circle layoutX="147.0" layoutY="71.0" radius="47.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="118.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@invoicesummary.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

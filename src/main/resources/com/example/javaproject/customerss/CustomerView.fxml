@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="856.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.customers.CustomerController">
+   <children>
+      <Label layoutX="275.0" layoutY="16.0" text="Client Enrollment Console">
+         <font>
+            <Font name="Book Antiqua Bold" size="25.0" />
+         </font>
+      </Label>
+      <Circle layoutX="73.0" layoutY="41.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="565.0" layoutX="24.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="565.0" layoutX="682.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="138.0" />
+      <Label layoutX="55.0" layoutY="89.0" text="Mobile Number">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMobno" layoutX="55.0" layoutY="116.0" prefHeight="26.0" prefWidth="218.0" />
+      <Label layoutX="55.0" layoutY="160.0" text="Name">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="55.0" layoutY="187.0" prefHeight="26.0" prefWidth="218.0" />
+      <Label layoutX="443.0" layoutY="153.0" text="Email Id">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="443.0" layoutY="180.0" prefHeight="19.0" prefWidth="210.0" />
+      <Label layoutX="55.0" layoutY="231.0" text="Address">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="55.0" layoutY="258.0" prefHeight="26.0" prefWidth="317.0" />
+      <Label layoutX="442.0" layoutY="232.0" text="Date of Start">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dos" layoutX="443.0" layoutY="259.0" prefHeight="23.0" prefWidth="210.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="32.0" layoutY="304.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
+      <Label layoutX="54.0" layoutY="319.0" text="Areas">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ComboArea" layoutX="54.0" layoutY="342.0" onAction="#doSelArea" prefHeight="26.0" prefWidth="182.0" />
+      <Label layoutX="442.0" layoutY="314.0" text="Hawker IDs">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ComboHawkerID" layoutX="442.0" layoutY="337.0" prefHeight="19.0" prefWidth="210.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="219.0" layoutX="30.0" layoutY="410.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
+      <Label layoutX="57.0" layoutY="423.0" text="Papers">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lstPapers" layoutX="55.0" layoutY="450.0" onMouseClicked="#doSelPapers" prefHeight="156.0" prefWidth="124.0" />
+      <Label layoutX="201.0" layoutY="423.0" text="Prices">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lstPrices" layoutX="199.0" layoutY="450.0" prefHeight="156.0" prefWidth="124.0" />
+      <Label layoutX="383.0" layoutY="423.0" text="Selected Papers">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lstSelPapers" layoutX="381.0" layoutY="450.0" onMouseClicked="#doDelPapers" prefHeight="156.0" prefWidth="124.0" />
+      <Label layoutX="530.0" layoutY="423.0" text="Selected Prices">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lstSelPrices" layoutX="528.0" layoutY="450.0" prefHeight="156.0" prefWidth="124.0" />
+      <Button layoutX="692.0" layoutY="99.0" mnemonicParsing="false" onAction="#doNew" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: black;" text="New" textFill="WHITE">
+         <font>
+            <Font name="Dubai Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="692.0" layoutY="237.0" mnemonicParsing="false" onAction="#doStartPaper" prefHeight="34.0" prefWidth="118.0" style="-fx-background-color: black;" text="Start Paper" textFill="WHITE">
+         <font>
+            <Font name="Dubai Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="288.0" layoutY="114.0" mnemonicParsing="false" onAction="#doFetch" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: black;" text="Fetch" textFill="WHITE">
+         <font>
+            <Font name="Dubai Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="692.0" layoutY="368.0" mnemonicParsing="false" onAction="#doChange" prefHeight="34.0" prefWidth="118.0" style="-fx-background-color: black;" text="Change" textFill="WHITE">
+         <font>
+            <Font name="Dubai Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="692.0" layoutY="498.0" mnemonicParsing="false" onAction="#doRemoveCustomer" prefHeight="34.0" prefWidth="124.0" style="-fx-background-color: black;" text="Remove Customer" textFill="WHITE">
+         <font>
+            <Font name="Dubai Bold" size="13.0" />
+         </font></Button>
+      <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="50.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@clientimage.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
